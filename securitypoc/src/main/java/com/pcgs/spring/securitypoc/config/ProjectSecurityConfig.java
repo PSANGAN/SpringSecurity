@@ -43,6 +43,7 @@ public class ProjectSecurityConfig {
         UserDetails adminUser = User.withUsername("admin")
                 .password("{bcrypt}$2y$12$94uoojJAk6TRw9oyc1r.E.S38YsA8OYJ20xDCsM7hZdD/CFp4db/.")
                  .authorities("admin").build();
+
         return new InMemoryUserDetailsManager(adminUser,readUser);
     }
    */
