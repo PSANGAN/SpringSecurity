@@ -1,7 +1,10 @@
 package com.pcgs.spring.securitypoc.config;
 
+import com.pcgs.spring.securitypoc.exceptionhandling.CustomAccessDeniedHandler;
+import com.pcgs.spring.securitypoc.exceptionhandling.CustomBasicAuthenticationEntryPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.password.CompromisedPasswordChecker;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,6 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.password.HaveIBeenPwnedRestApiPasswordChecker;
 
 @Configuration
+@Profile("!prod")
 public class ProjectSecurityConfig {
 
     @Bean
@@ -22,14 +26,27 @@ public class ProjectSecurityConfig {
 
         httpSecurity.csrf(csrfConfig -> csrfConfig.disable());
 
+        httpSecurity.sessionManagement(smc -> smc.invalidSessionUrl("/invalidSession")
+                        .maximumSessions(3).maxSessionsPreventsLogin(true))
+                .requiresChannel(rcc -> rcc.anyRequest().requiresInsecure()); // Only HTTP
+
         httpSecurity.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/myAccount", "/myBalance", "/myLoans", "/myCards").authenticated()
-                .requestMatchers("/notices", "/contact", "/error","/register").permitAll());
+                .requestMatchers("/notices", "/contact", "/error","/register","/invalidSession").permitAll());
+
 //        httpSecurity.formLogin( httpSecurityFormLoginConfigurer -> httpSecurityFormLoginConfigurer.disable());
 //        httpSecurity.httpBasic(httpSecurityHttpBasicConfigurer -> httpSecurityHttpBasicConfigurer.disable());
 
         httpSecurity.formLogin(Customizer.withDefaults());
-        httpSecurity.httpBasic(Customizer.withDefaults());
+        //Only Works for HTTP
+        httpSecurity.httpBasic(htc -> htc.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
+
+        // Global Level Authentication Exception
+        // httpSecurity.exceptionHandling(htc -> htc.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
+
+        httpSecurity.exceptionHandling(ehc -> ehc.accessDeniedHandler(new CustomAccessDeniedHandler()));
+
+
         return  httpSecurity.build();
     }
 
