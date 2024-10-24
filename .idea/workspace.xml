@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a8549d7-713a-4b2e-a4a3-4475dde43e18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/events/AuthorizationEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/model/Authority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/EazyBankApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/EazyBankApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/config/EazyBankUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/config/EazyBankUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/config/ProjectSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/config/ProjectSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/securitypoc/src/main/java/com/pcgs/spring/securitypoc/model/Customer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2n1RoDIvgggdDkAlv8KNGilH9IK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.EazyBankApiApplication.executor": "Run",
+    "Application.SpringSec.executor": "Run",
+    "Maven.securitypoc [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/PGS/GitHub/SpringJpaAndHibernate",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="SpringSec" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.pcgs.spring.securitypoc.EazyBankApiApplication" />
+      <module name="SpringSecurity" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a8549d7-713a-4b2e-a4a3-4475dde43e18" name="Changes" comment="" />
+      <created>1728138767436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728138767436</updated>
+    </task>
+    <servers />
+  </component>
+</project>
